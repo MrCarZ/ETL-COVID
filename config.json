@@ -1,0 +1,5 @@
+{
+    "data_sources":{
+        "api": "https://covid-api.mmediagroup.fr/v1/"
+    }
+}
