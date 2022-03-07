@@ -1,9 +1,9 @@
 # HTTP Request Testing Files
-.rest
-.sqlite
+*.rest
+*.sqlite
 
 # SQL Queries Development Files
-.sql
+*.sql
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
