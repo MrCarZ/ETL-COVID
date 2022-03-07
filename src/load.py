@@ -1,4 +1,4 @@
-import sql_statements
+from utils import sql_statements
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -53,7 +53,6 @@ class MySQL:
                 connection = self.connect_to_db()
                 cursor = connection.cursor()
                 formatted_data = dataframe.to_numpy().tolist()
-                print(formatted_data)
                 statement = sql_statements.insert_to_table.format(table_name = table)
                 cursor.executemany(statement, formatted_data)
                 for data in cursor:
@@ -78,9 +77,3 @@ class MySQL:
         finally:
             cursor.close()
             self.disconnect_from_db(connection)
-
-#transf = Transform()
-#print(transf.dataframe)
-#database = MySQL('localhost', 'root', '@Teste123', 'ETLCOVID')
-#database.connect_to_db()
-#database.create_table("Brazil")

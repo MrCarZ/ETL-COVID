@@ -6,7 +6,7 @@ class Extract:
         self.data_source = data_source
         self.request_cache = requests_cache.install_cache(cache_name='github_cache', backend='sqlite', expire_after=3600)
 
-    def getDataFromAPI(self, endpoint, **kwargs):
+    def get_data_from_api(self, endpoint, **kwargs):
         endpoint_string = self.data_source + endpoint
         req = requests.get(endpoint_string, params=kwargs)
         return req.json()
