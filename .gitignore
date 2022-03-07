@@ -1,3 +1,10 @@
+# HTTP Request Testing Files
+.rest
+.sqlite
+
+# SQL Queries Development Files
+.sql
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
