@@ -1,7 +1,6 @@
 from utils import sql_statements
 import mysql.connector
 from mysql.connector import errorcode
-
 class MySQL:
     def __init__(self, host, user, password, database):
         self.host=host
